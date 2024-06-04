@@ -1,0 +1,19 @@
+/* body{
+    background-image: url(imagess/Cryptocurrency.jpeg);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    /* background-size: cover; */
+    
+
+/* } */
+.crypto{
+    opacity: 100%;
+    width: 250%;
+    height: 50%;
+}
+
+.homePage{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
