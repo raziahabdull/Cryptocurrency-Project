@@ -1,123 +1,291 @@
 body {
-    background-color: #f5f5f5;
-    /* Light gray background */
+    background-color: darkcyan;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Set minimum height of the body to full viewport height */
     background-repeat: no-repeat;
     background-size: contain;
 
 }
- 
 .container {
-    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
     margin: 0 auto;
     flex: 1;
-    /* Allow container to grow to fill remaining space */
+    border-radius: 50px;
+    
 }
- 
+.header{
+    background-color: #5A6268;
+    width:100%;
+    padding-top: 2%;
+    
+}
+.myT{
+    border-radius: 20px;
+    backdrop-filter: blur(0.5px); 
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+th{
+    margin-top: 20%;
+}
 h1 {
   color:rgb(57,0,143);
-    /* color: #343a40; */
-    /* Dark gray heading color */
+    
 }
- 
 .input-group {
     margin-bottom: 20px;
 }
- 
-.table {
+table {
     width: 100%;
     border-collapse: collapse;
 }
- 
 .table th,
 .table td {
     text-align: center;
     white-space: nowrap;
-    /* Prevent text wrapping in cells */
     overflow: hidden;
-    /* Hide overflowing content */
     text-overflow: ellipsis;
-    /* Display ellipsis (...) for overflowed content */
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    border-radius: 50px;
 }
- 
 .table th {
-    background-color:  rgb(57,0,143);
-    /* background-color: #343a40; */
-    /* Dark gray background for table headers */
-    color: #ffffff;
-    /* White text color for table headers */
+    background-color:  light thistle;
+    color: #FFFFFF;
+
 }
- 
 .table th:first-child,
 .table td:first-child {
     font-weight: bold;
-    /* Bold font weight for first column */
 }
- 
 .table th:not(:first-child),
 .table td:not(:first-child) {
-    font-weight: normal;
-    /* Normal font weight for other columns */
+    font-weight: bold;
+    
 }
- 
 .table tbody tr:hover {
-    background-color: #f8f9fa;
-    /* Light gray background on hover */
+    background-color: #F8F9FA;
     cursor: pointer;
 }
- 
 .crypto-logo {
     width: 30px;
-    /* Adjust the width of the coin logo */
+   
     height: 30px;
-    /* Adjust the height of the coin logo */
+   
 }
- 
 .btn-primary {
-    background-color: #6c757d;
-    /* Muted gray button color */
-    border-color: #6c757d;
+        background-color: #6C757D;
+        
+        border-color: #6C757D;
+        padding: 15px;
+        color: #D8DADC;
 }
- 
 .btn-primary:hover {
-    background-color: #5a6268;
-    /* Darker gray on hover */
-    border-color: #5a6268;
+    background-color: #5A6268;
+    
+    border-color: #5A6268;
 }
- 
 footer {
-    background-color: #343a40;
-    /* Dark gray background for footer */
-    color: #ffffff;
-    /* White text color for footer */
+    background-color: #343;
+    color: #FFFFFF;
     text-align: center;
     margin-top: auto;
-    /* Push the footer to the bottom */
+    
 }
- 
-header h1 {
-    color: #ffffff;
-    /* Set heading color to white */
+ h1 {
+    color: #E2E5EC;
+    
+    text-align: center;
+    height: 49%;
+    padding: 5px;
+    margin-right: 300px;
+   
+    margin-top: px;
+    width: 1157px;
+ }
+ #searchInput{
+    width: 80%;
+    padding: 10px;
+   }
+   .input-group{
+    display: flex;
+    width: 115%;
+   }
+    
+
+.crypto-logo {
+    width: 25px; 
+    height: 25px;
 }
- 
-/* Responsive styles for small screens */
-@media only screen and (max-width: 600px) {
- 
-    .table th,
-    .table td {
-        font-size: 12px;
-        /* Decrease font size for small screens */
-        padding: 5px;
+
+   .table th,
+   .table td {
+        font-size: 14px; 
+        padding: 6px;
     }
- 
-    header h1 {
-        font-size: 24px;
-        /* Adjust font size for small screens */
+
+   .btn-primary {
+        padding: 10px; 
     }
-}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+    
+        body {
+            background-color: darkcyan;
+            
+            display:grid;
+            flex-direction: column;
+            min-height: 100vh;
+           
+            background-repeat: no-repeat;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-flow: column;
+            width: 300px;
+            margin: 0 ;
+            flex: 1;
+            border-radius: 20px;
+        }
+        .header{
+            background-color: #5A6268;
+            width:100%;
+            padding-top: 2%;
+        }
+        .myT{
+            border-radius: 20px;
+            backdrop-filter: blur(0.5px); 
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            width:40%;
+        }
+        th{
+            margin-top: 10%;
+        }
+        h1 {
+          color:rgb(57,0,143);
+           
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 20%;
+            border-collapse: collapse;
+        }
+        .table th,
+        .table td {
+            text-align: center;
+            white-space: nowrap;
+         
+            overflow: hidden;
+            
+            text-overflow: ellipsis;
+         
+            padding: px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-radius: 50px;
+        }
+        .table th {
+            background-color:  light thistle;
+            
+            color: #FFFFFF;
+         
+        }
+        .table th:first-child,
+        .table td:first-child {
+            font-weight: bold;
+          
+        }
+        .table th:not(:first-child),
+        .table td:not(:first-child) {
+            font-weight: bold;
+         
+        }
+        .table tbody tr:hover {
+            background-color: #F8F9FA;
+            cursor: pointer;
+        }
+        .crypto-logo {
+            width: 20px;
+            height: 20px;
+        }
+        .btn-primary {
+                background-color: #6C757D;
+                border-color: #6C757D;
+                /* padding: 15px; */
+                color: #D8DADC;
+        }
+        .btn-primary:hover {
+            background-color: #5A6268;
+            border-color: #5A6268;
+        }
+        footer {
+            background-color: #343A40;
+            color: #FFFFFF;
+            text-align: center;
+            /* margin-top: auto; */
+            
+        }
+         h1 {
+            color: #E2E5EC;
+            text-align: center;
+            height: 49%;
+            padding: 5px;
+            /* margin-right: 300px; */
+        
+            /* margin-top: px; */
+            width: 400px;
+         }
+         #searchInput{
+            width: 500px;
+            /* padding: 0px; */
+           }
+           .input-group{
+            display: flex;
+            width: 60%;
+           }
+            
+        }
+
+
+
+
+/* /@media only screen and (min-width: 1025px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin: 0 auto;
+        flex: 1;
+        border-radius: 50px;
+        
+    }
+
+   .crypto-logo {
+        width: 35px; 
+        height: 35px;
+    }
+
+   .table th,
+   .table td {
+        font-size: 18px; 
+        padding: 10px;
+    }
+
+   .btn-primary {
+        padding: 15px; /
+    }
+} */

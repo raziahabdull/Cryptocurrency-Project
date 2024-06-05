@@ -1,9 +1,11 @@
+let allCoins = [];
 async function fetchCryptoData() {
   try {
     const response = await fetch(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
     );
     const data = await response.json();
+    allCoins = data;
     return data;
   } catch (error) {
     console.error("Error fetching cryptocurrency data:", error);
@@ -42,16 +44,18 @@ function filterCryptoData(coins, searchTerm) {
 function handleSearchInput() {
   const searchInput = document.getElementById("searchInput");
   const searchTerm = searchInput.value.trim();
-  fetchCryptoData().then((coins) => {
-    const filteredCoins = filterCryptoData(coins, searchTerm);
+  if (searchTerm === "") {
+    displayCryptoData(allCoins);
+  } else {
+    const filteredCoins = filterCryptoData(allCoins, searchTerm);
     displayCryptoData(filteredCoins);
-  });
+  }
 }
 // Function to initialize the app
 async function initializeApp() {
   try {
-    const coins = await fetchCryptoData();
-    displayCryptoData(coins);
+    await fetchCryptoData();
+    displayCryptoData(allCoins);
   } catch (error) {
     console.error("Error initializing app:", error);
     // Handle the error appropriately
@@ -62,5 +66,3 @@ initializeApp();
 // Add event listener to search input
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", handleSearchInput);
-// Call initializeApp function when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", initializeApp)
