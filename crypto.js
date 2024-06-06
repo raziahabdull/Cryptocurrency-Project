@@ -103,7 +103,7 @@ function updatePagination(currentPage) {
       pageLink.style.fontWeight = "bold";
     }
     paginationContainer.appendChild(pageLink);
-    paginationContainer.appendChild(document.createTextNode(" "));
+    // paginationContainer.appendChild(document.createTextNode(" "));
   }
 }
 
