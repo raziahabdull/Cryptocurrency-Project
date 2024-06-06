@@ -61,19 +61,15 @@ async function initializeApp() {
     // Handle the error appropriately
   }
 }
-// Example usage:
+
 initializeApp();
 // Add event listener to search input
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", handleSearchInput);
 
 
-const data = [
-  { name: "Bitcoin", symbol: "BTC", price: "$71251.00" },
-  
-];
 
-const rowsPerPage = 5;
+const rowsPerPage = 7;
 let currentPage = 1;
 
 function displayTable(page) {
@@ -82,18 +78,12 @@ function displayTable(page) {
   const endIndex = startIndex + rowsPerPage;
   const slicedData = data.slice(startIndex, endIndex);
 
- 
+  
   table.innerHTML = '';
 
-  
-  slicedData.forEach(item => {
-    const row = table.insertRow();
-    row.insertCell().innerHTML = item.name;
-    row.insertCell().innerHTML = item.symbol;
-    row.insertCell().innerHTML = item.price;
-  });
+ 
 
-  
+  // pagination
   updatePagination(page);
 }
 
@@ -117,5 +107,5 @@ function updatePagination(currentPage) {
   }
 }
 
-//display table
+// original display
 displayTable(currentPage);
