@@ -66,3 +66,56 @@ initializeApp();
 // Add event listener to search input
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", handleSearchInput);
+
+
+const data = [
+  { name: "Bitcoin", symbol: "BTC", price: "$71251.00" },
+  
+];
+
+const rowsPerPage = 5;
+let currentPage = 1;
+
+function displayTable(page) {
+  const table = document.getElementById("myT");
+  const startIndex = (page - 1) * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
+  const slicedData = data.slice(startIndex, endIndex);
+
+ 
+  table.innerHTML = '';
+
+  
+  slicedData.forEach(item => {
+    const row = table.insertRow();
+    row.insertCell().innerHTML = item.name;
+    row.insertCell().innerHTML = item.symbol;
+    row.insertCell().innerHTML = item.price;
+  });
+
+  
+  updatePagination(page);
+}
+
+function updatePagination(currentPage) {
+  const pageCount = Math.ceil(data.length / rowsPerPage);
+  const paginationContainer = document.getElementById("pagination");
+
+  paginationContainer.innerHTML = '';
+  for (let i = 1; i <= pageCount; i++) {
+    const pageLink = document.createElement("a");
+    pageLink.href = "#";
+    pageLink.innerText = i;
+    pageLink.onclick = function () {
+      displayTable(i);
+    };
+    if (i === currentPage) {
+      pageLink.style.fontWeight = "bold";
+    }
+    paginationContainer.appendChild(pageLink);
+    paginationContainer.appendChild(document.createTextNode(" "));
+  }
+}
+
+//display table
+displayTable(currentPage);
