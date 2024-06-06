@@ -61,8 +61,51 @@ async function initializeApp() {
     // Handle the error appropriately
   }
 }
-// Example usage:
+
 initializeApp();
 // Add event listener to search input
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", handleSearchInput);
+
+
+
+const rowsPerPage = 7;
+let currentPage = 1;
+
+function displayTable(page) {
+  const table = document.getElementById("myT");
+  const startIndex = (page - 1) * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
+  const slicedData = data.slice(startIndex, endIndex);
+
+  
+  table.innerHTML = '';
+
+ 
+
+  // pagination
+  updatePagination(page);
+}
+
+function updatePagination(currentPage) {
+  const pageCount = Math.ceil(data.length / rowsPerPage);
+  const paginationContainer = document.getElementById("pagination");
+
+  paginationContainer.innerHTML = '';
+  for (let i = 1; i <= pageCount; i++) {
+    const pageLink = document.createElement("a");
+    pageLink.href = "#";
+    pageLink.innerText = i;
+    pageLink.onclick = function () {
+      displayTable(i);
+    };
+    if (i === currentPage) {
+      pageLink.style.fontWeight = "bold";
+    }
+    paginationContainer.appendChild(pageLink);
+    paginationContainer.appendChild(document.createTextNode(" "));
+  }
+}
+
+// original display
+displayTable(currentPage);

@@ -1,10 +1,8 @@
 body {
     background-color: darkcyan;
-    /* Light gray background */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Set minimum height of the body to full viewport height */
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -16,7 +14,7 @@ body {
     margin: 0 auto;
     flex: 1;
     border-radius: 50px;
-    /* Allow container to grow to fill remaining space */
+    
 }
 .header{
     background-color: #5A6268;
@@ -26,7 +24,7 @@ body {
 }
 .myT{
     border-radius: 20px;
-    backdrop-filter: blur(0.5px); /* Frosted glass effect */
+    backdrop-filter: blur(0.5px); 
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
     -webkit-backdrop-filter: blur(5px);
@@ -37,8 +35,7 @@ th{
 }
 h1 {
   color:rgb(57,0,143);
-    /* color: #343A40; */
-    /* Dark gray heading color */
+  
 }
 .input-group {
     margin-bottom: 20px;
@@ -51,73 +48,60 @@ table {
 .table td {
     text-align: center;
     white-space: nowrap;
-    /* Prevent text wrapping in cells */
     overflow: hidden;
-    /* Hide overflowing content */
     text-overflow: ellipsis;
-    /* Display ellipsis (...) for overflowed content */
-    padding: 8px;
+    padding: 2px 4px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     border-radius: 50px;
 }
 .table th {
     background-color:  light thistle;
-    /* background-color: #343A40; */
-    /* Dark gray background for table headers */
     color: #FFFFFF;
-    /* White text color for table headers */
+    
 }
 .table th:first-child,
 .table td:first-child {
     font-weight: bold;
-    /* Bold font weight for first column */
+   
 }
 .table th:not(:first-child),
 .table td:not(:first-child) {
     font-weight: bold;
-    /* Normal font weight for other columns */
+    
 }
 .table tbody tr:hover {
     background-color: #F8F9FA;
-    /* Light gray background on hover */
     cursor: pointer;
 }
 .crypto-logo {
     width: 30px;
-    /* Adjust the width of the coin logo */
     height: 30px;
-    /* Adjust the height of the coin logo */
+   
 }
 .btn-primary {
         background-color: #6C757D;
-        /* Muted gray button color */
         border-color: #6C757D;
         padding: 15px;
         color: #D8DADC;
 }
 .btn-primary:hover {
     background-color: #5A6268;
-    /* Darker gray on hover */
     border-color: #5A6268;
 }
 footer {
     background-color: #343A40;
-    /* Dark gray background for footer */
     color: #FFFFFF;
-    /* White text color for footer */
     text-align: center;
     margin-top: auto;
-    /* Push the footer to the bottom */
+    
 }
  h1 {
     color: #E2E5EC;
-    /* background-color: #5A6268; */
     text-align: center;
     height: 49%;
     padding: 5px;
     margin-right: 300px;
-    /* border-radius: 5px; */
     margin-top: px;
     width: 1157px;
  }
@@ -127,26 +111,59 @@ footer {
    }
    .input-group{
     display: flex;
-    width: 115%;
    }
-    /* margin-left: ; */
-    /* margin-right: 100px; 
-    margin-top: 1%;  */
-    /* Set heading color to white
+    
 
-/*  
+   .crypto-logo {
+        width: 25px; 
+        height: 25px;
+    }
 
-    /* Responsive styles for small screens */
+  
+   
 
-@media only screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 768px) {
+    .table {
+      overflow-x: auto;
+      display: block;
+    }
+    
     .table th,
     .table td {
-        font-size: 12px;
-        /* Decrease font size for small screens */
-        padding: 5px;
-    }
-    header h1 {
-        font-size: 24px;
-        /* Adjust font size for small screens */
+    white-space: nowrap;
     }
 }
+    
+@media screen and (max-width: 480px) {
+.container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+    
+.table th,
+.table td {
+    font-size: 14px;
+    padding: 5px;
+}
+    
+h1 {
+    font-size: 24px;
+    margin-right: 0;
+    width: 100%;
+}
+    
+.input-group {
+    flex-direction: column;
+     align-items: center;
+}
+    
+#searchInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
+}
+    
+    
