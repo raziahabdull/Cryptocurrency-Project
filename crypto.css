@@ -1,26 +1,27 @@
-body {
+ body {
     background-color: darkcyan;
+    
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
-
 }
 .container {
     display: flex;
     flex-direction: column;
-    width: 1200px;
     margin: 0 auto;
     flex: 1;
     border-radius: 50px;
-    
+    width: 100%;
+   
+
 }
 .header{
     background-color: #5A6268;
     width:100%;
     padding-top: 2%;
-    
 }
 .myT{
     border-radius: 20px;
@@ -31,11 +32,12 @@ body {
     backdrop-filter: blur(5px);
 }
 th{
-    margin-top: 20%;
+    margin-top: 40%;
+    font-size: 50px;
 }
 h1 {
   color:rgb(57,0,143);
-  
+
 }
 .input-group {
     margin-bottom: 20px;
@@ -50,18 +52,28 @@ table {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 8px 12px;
     padding: 2px 4px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    border-radius: 50px;
+
 }
 .table th {
     background-color:  light thistle;
     color: #FFFFFF;
-    
+    font-size:40%;
+    text-size-adjust: 30%;
+    height: 60px;
+
 }
 .table th:first-child,
 .table td:first-child {
+    font-size: 20px;
+    
+}
+.table th:not(:first-child),
+.table td:not(:first-child) {
+    font-size: 20px;
     font-weight: bold;
    
 }
@@ -72,6 +84,12 @@ table {
 }
 .table tbody tr:hover {
     background-color: #F8F9FA;
+    
+}
+.crypto-logo {
+    width: 50px;
+    height: 50px;
+
     cursor: pointer;
 }
 .crypto-logo {
@@ -94,11 +112,14 @@ footer {
     color: #FFFFFF;
     text-align: center;
     margin-top: auto;
-    
+
 }
  h1 {
     color: #E2E5EC;
     text-align: center;
+    height: 59%;
+    padding: 20px;
+    
     height: 49%;
     padding: 5px;
     margin-right: 300px;
@@ -112,6 +133,76 @@ footer {
    .input-group{
     display: flex;
    }
+   .crypto-logo {
+    width: 52px; 
+    height: 52px;
+}
+.table th,
+.table td {
+    font-size: 20px; 
+    padding: 6px; 
+}
+.btn-primary {
+    padding: 10px; 
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+ 
+ 
+/* pagination position styling */
+.pagination_section {
+    position: relative;
+}
+ 
+/* pagination styling */
+.pagination_section a {
+    color: black;
+    padding: 10px 18px;
+    text-decoration: none;
+}
+ 
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+    background-color: #031F3B;
+    color: white;
+}
+ 
+/* pagination hover effect on active*/
+ 
+a:nth-child(5) {
+    background-color: green;
+    color: white;
+}
+ 
+a:nth-child(1) {
+    font-weight: bold;
+}
+ 
+a:nth-child(7) {
+    font-weight: bold;
+}
+ 
+.content {
+    margin: 50px;
+    padding: 15px;
+    width: 700px;
+    height: 200px;
+    border: 2px solid black;
+}
     
 
    .crypto-logo {
@@ -126,6 +217,162 @@ footer {
 
 @media screen and (max-width: 768px) {
     .table {
+        overflow-x: auto;
+        display: block;
+    }
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .table th,
+    .table td {
+        font-size: 14px;
+        padding: 5px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+   @media screen and (min-width: 800px) and (max-width: 1280px) {
+    body {
+        background-color: darkcyan;
+        display: grid;
+        flex-direction: column;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+    }
+    .container {
+        display: grid;
+        flex-direction: column;
+        width: 1270px;
+        margin: 0;
+        flex: 1;
+        border-radius: 50px;
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+    .header {
+        background-color: #5A6268;
+        width: 80%;
+        padding-top: 2%;
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+    .myT {
+        border-radius: 20px;
+        backdrop-filter: blur(0.5px);
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        width: 100%;
+    }
+    th {
+        margin-top: 10%;
+    }
+    h1 {
+        color: rgb(57, 0, 143);
+    }
+    .input-group {
+        margin-bottom: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-right: 0px;
+    }
+    .table th,
+    .table td {
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        border-radius: 30px;
+    }
+    .table th {
+        background-color: lightthistle;
+        color: #FFFFFF;
+    }
+    .table th:first-child,
+    .table td:first-child {
+        font-weight: bold;
+    }
+    .table th:not(:first-child),
+    .table td:not(:first-child) {
+        font-weight: bold;
+    }
+    .table tbody tr:hover {
+        background-color: #F8F9FA;
+        cursor: pointer;
+    }
+    .crypto-logo {
+        width: 30px;
+        height: 30px;
+    }
+    .btn-primary {
+        background-color: #6C757D;
+        border-color: #6C757D;
+        padding: 15px;
+        color: #D8DADC;
+    }
+    .btn-primary:hover {
+        background-color: #5A6268;
+        border-color: #5A6268;
+    }
+
+    
+    footer {
+        background-color: #343A40;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: auto;
+    }
+
+
+    h1 {
+        color: #E2E5EC;
+        text-align: center;
+        height: 49%;
+        padding: 5px;
+        margin-right: 300px;
+        margin-top: 0; 
+        width: 900px;
+    }
+
+    #searchInput {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .input-group {
+        display: flex;
+        width: 129%;
+    }
+}
+
+
+
+   
       overflow-x: auto;
       display: block;
     }
