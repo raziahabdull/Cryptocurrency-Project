@@ -29,11 +29,11 @@
                 <thead>
                     <tr>
                         <th>Logo</th>
-                        <th>Name</th>
-                        <th>Symbol</th>
+                        <th class="crpto-name">Name</th>
+                        <th class="crpto-name">Symbol</th>
                         <th>Price</th>
                         <th>Price Change</th>
-                        <th>24h Volume</th>
+                        <th class="pr ">24h Volume</th>
                         <th>Market Cap</th>
                     </tr>
                 </thead>
@@ -45,7 +45,13 @@
         </div>
     </div>
 
-    <div id="pagination"></div>
+    <div id="pagination">
+        
+        <button onclick="changePage(-1)">Prev</button>
+        <span id="currentPage">1</span>
+        <button onclick="changePage(1)">Next</button>
+        
+    </div>
     
     <footer class="bg-dark text-white py-4 mt-4">
         <div class="container text-center">

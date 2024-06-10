@@ -1,3 +1,5 @@
+const rowPerPage = 7;
+let currenPage = 1;
 let allCoins = [];
 async function fetchCryptoData() {
   try {
@@ -109,3 +111,21 @@ function updatePagination(currentPage) {
 
 // original display
 displayTable(currentPage);
+
+
+function fetchCryptos(page) {
+  const params = new URLSearchParams({
+    vs_currency: 'usd',
+    order: 'market_cap_desc',
+    per_page: 10,
+    page: page
+  });
+  
+}
+function changePage(offset) {
+  currentPage += offset;
+  document.getElementById('currentPage').textContent = currentPage;
+  fetchCryptos(currentPage);
+}
+// Initial fetch
+fetchCryptos(currentPage);

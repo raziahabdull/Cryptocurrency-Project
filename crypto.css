@@ -119,6 +119,9 @@ footer {
         height: 25px;
     }
 
+    .pagination { margin-top: 20px; }
+    .pagination button { padding: 5px 15px; margin: 0 5px; }
+
   
    
 
