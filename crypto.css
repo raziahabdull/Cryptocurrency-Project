@@ -1,6 +1,7 @@
  body {
     background-color: darkcyan;
     
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,6 +16,7 @@
     border-radius: 50px;
     width: 100%;
    
+
 }
 .header{
     background-color: #5A6268;
@@ -51,6 +53,7 @@ table {
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 8px 12px;
+    padding: 2px 4px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 
@@ -61,7 +64,7 @@ table {
     font-size:40%;
     text-size-adjust: 30%;
     height: 60px;
-    
+
 }
 .table th:first-child,
 .table td:first-child {
@@ -71,6 +74,12 @@ table {
 .table th:not(:first-child),
 .table td:not(:first-child) {
     font-size: 20px;
+    font-weight: bold;
+   
+}
+.table th:not(:first-child),
+.table td:not(:first-child) {
+    font-weight: bold;
     
 }
 .table tbody tr:hover {
@@ -80,6 +89,12 @@ table {
 .crypto-logo {
     width: 50px;
     height: 50px;
+
+    cursor: pointer;
+}
+.crypto-logo {
+    width: 30px;
+    height: 30px;
    
 }
 .btn-primary {
@@ -97,7 +112,7 @@ footer {
     color: #FFFFFF;
     text-align: center;
     margin-top: auto;
-  
+
 }
  h1 {
     color: #E2E5EC;
@@ -105,6 +120,11 @@ footer {
     height: 59%;
     padding: 20px;
     
+    height: 49%;
+    padding: 5px;
+    margin-right: 300px;
+    margin-top: px;
+    width: 1157px;
  }
  #searchInput{
     width: 80%;
@@ -183,6 +203,15 @@ a:nth-child(7) {
     height: 200px;
     border: 2px solid black;
 }
+    
+
+   .crypto-logo {
+        width: 25px; 
+        height: 25px;
+    }
+
+  
+   
 
 
 
@@ -344,3 +373,44 @@ a:nth-child(7) {
 
 
    
+      overflow-x: auto;
+      display: block;
+    }
+    
+    .table th,
+    .table td {
+    white-space: nowrap;
+    }
+}
+    
+@media screen and (max-width: 480px) {
+.container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+    
+.table th,
+.table td {
+    font-size: 14px;
+    padding: 5px;
+}
+    
+h1 {
+    font-size: 24px;
+    margin-right: 0;
+    width: 100%;
+}
+    
+.input-group {
+    flex-direction: column;
+     align-items: center;
+}
+    
+#searchInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
+}
+    
+    

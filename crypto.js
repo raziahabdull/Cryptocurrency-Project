@@ -16,7 +16,6 @@ async function fetchCryptoData() {
     return [];
   }
 }
-// Function to display cryptocurrency data in the table
 function displayCryptoData(coins) {
   console.log({coins});
   const cryptoTable = document.getElementById("cryptoTable");
@@ -25,7 +24,9 @@ function displayCryptoData(coins) {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td><img src="${coin.image}" class="crypto-logo" alt="${coin.name}"></td>
-      <td>${coin.name}</td>
+      <td>${coin.name}</td>// original display
+136
+
       <td>${coin.symbol.toUpperCase()}</td>
       <td>$${coin.current_price.toFixed(2)}</td>
       <td>${coin.price_change_percentage_24h.toFixed(2)}%</td>
@@ -35,7 +36,6 @@ function displayCryptoData(coins) {
     cryptoTable.appendChild(row);
   });
 }
-// Function to filter cryptocurrencies based on user input
 function filterCryptoData(coins, searchTerm) {
   searchTerm = searchTerm.toLowerCase();
   const filteredCoins = coins.filter(
@@ -45,7 +45,6 @@ function filterCryptoData(coins, searchTerm) {
   );
   return filteredCoins;
 }
-// Function to handle search input
 function handleSearchInput() {
   const searchInput = document.getElementById("searchInput");
   const searchTerm = searchInput.value.trim();
@@ -56,7 +55,6 @@ function handleSearchInput() {
     displayCryptoData(filteredCoins);
   }
 }
-// Function to initialize the app
 async function initializeApp() {
   try {
     allCoins = await fetchCryptoData();
@@ -68,36 +66,55 @@ async function initializeApp() {
   }
 }
 initializeApp();
-// Add event listener to search input
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", handleSearchInput); 
 
 
 const data = [
   { coinName: "bitcoin", coinSymbol: "btn"},
-  // More data...
 ];
 const rowsPerPage = 7;
 let currentPage = 1;
+
+initializeApp();
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("input", handleSearchInput);
+
+
+
+const rowsPerPage = 7;
+let currentPage = 1;
+
+
 function displayTable(page) {
   const table = document.getElementById("myT");
   const startIndex = (page - 1) * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
   const slicedData = data.slice(startIndex, endIndex);
-  // Clear existing table rows
   table.innerHTML = '';
-  // Add new rows to the table
   slicedData.forEach(item => {
     const row = table.insertRow();
     row.insertCell().innerHTML = item.coinName;
     row.insertCell().innerHTML = item.coinSymbol;
   });
-  // Update pagination
   updatePagination(page);
 }
 function updatePagination(currentPage) {
   const pageCount = Math.ceil(data.length / rowsPerPage);
   const paginationContainer = document.getElementById("pagination");
+
+  
+  table.innerHTML = '';
+
+ 
+
+  updatePagination(page);
+}
+
+function updatePagination(currentPage) {
+  const pageCount = Math.ceil(data.length / rowsPerPage);
+  const paginationContainer = document.getElementById("pagination");
+
   paginationContainer.innerHTML = '';
   for (let i = 1; i <= pageCount; i++) {
     const pageLink = document.createElement("a");
@@ -113,6 +130,7 @@ function updatePagination(currentPage) {
     paginationContainer.appendChild(document.createTextNode(" "));
   }
 }
-// Initial display
 displayTable(currentPage)
 
+
+displayTable(currentPage);
