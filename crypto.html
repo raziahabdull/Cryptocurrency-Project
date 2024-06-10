@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0">
+    <title>Cryptocurrency Portfolio Tracker</title>
+    <link rel="stylesheet" href="index.html" >
+    <link rel="stylesheet" href="crypto.css">
+</head>
+<body>
+   
+    <header class="header">
+        <div class="container text-center">
+            <h1>Cryptomania Tracker</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="searchInput" class="form-control"  placeholder="Search cryptocurrencies...">
+            <div class="input-group-append">
+                <button class="btn btn-primary"
+                        type="button" id="searchButton">
+                  Search</button>
+            </div>
+        </div>
+        <div class="myT">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>Price Change</th>
+                        <th>24h Volume</th>
+                        <th>Market Cap</th>
+                    </tr>
+                </thead>
+                <tbody id="cryptoTable">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+
+    <div id="pagination"></div>
+    
+    <footer class="bg-dark text-white py-4 mt-4">
+        <div class="container text-center">
+            <p>© 2024 Cryptomania Tracker</p>
+        </div>
+    </footer>
+    
+   
+    <script src="crypto.js"></script>
+</body>
+</html>
+</body>
+</html>

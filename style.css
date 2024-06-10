@@ -1,61 +1,235 @@
+body{
+    background:linear-gradient(rgb(11,11,23),rgb(35, 92, 143),rgb(11,11,23));
+}
 
 h1{
-    font-size: 90px;
+    font-size: 55px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: bisque;
+    color: rgb(238, 236, 233);
+    margin-left:32%;
+    position: absolute;
+    top:15%;
+ 
 }
 button{
     border-radius: 50px;
-    background-color: rgb(233, 232, 227);
-    width:150px;
-    height:5vh;
+    background-color: rgb(244, 245, 247);
+    padding:10px;
     font-size: 25px;
-    color: antiquewhite;	
-    background: linear-gradient(rgba(7, 36, 70, 0.8), rgba(231, 228, 228, 0.2));
-    box-shadow: 0px 1px 4px -2px #333;
-    text-shadow: 0px -1px #333;	
-    animation: glow1 2s ease-in-out infinite;
-    margin-top: 10%;
-}
-
- .landingpage{
-    display: flex;
-    flex-direction: row;
-} 
-
-
-body{
-background-repeat: no-repeat;
-background-size:cover;
-background-image:-webkit-linear-gradient(rgb(6, 6, 43),rgb(17, 113, 138));
-height: 100;
-background-image: url(images/bitcoin.png);
-
-}
-.gold{
-    height: 100vh;
-}
-.welcome{
-    margin-left: 36%;
-    margin-right: 36%;
-    margin-top: 5%;
+    color: rgb(10, 10, 10);	
+    background: linear-gradient(rgba(7, 36, 70, 0.8));
     
-
-
+    position: absolute;
+    bottom: 98px;
+    left:45%;
+    
 }
+
+ 
+
+
+.ethereum{
+    -webkit-box-reflect:below 20px;
+}
+
+
 h2{
-    color: antiquewhite;
-    font-size:25px;
+    color: rgb(243, 239, 239);
+    font-size:20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 32%;
+    position:relative;
+    top:45%;
+    position: absolute;
 }
-
-
-
-
-
 
 
 a{
     text-decoration: none;
     color: white;
 }
+.homepage{
+    display: flex;
+    flex-direction: row;
+    gap:7%;
+}
+
+.centre{
+    margin-top: 7%;
+    width:700px; 
+    height: 90vh;
+}
+.ethereum2{
+    -webkit-box-reflect:below 20px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background:linear-gradient(rgb(11,11,23),rgb(35, 92, 143),rgb(11,11,23));
+    }
+    
+    h1{
+        font-size: 35px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(238, 236, 233);
+        margin-left:32%;
+        position: absolute;
+        top:35%;
+     
+    }
+    button{
+        border-radius: 50px;
+        background-color: rgb(12, 28, 82);
+        padding:20px;
+        font-size: 25px;
+        color: antiquewhite;	
+        background: linear-gradient(rgba(7, 36, 70, 0.8)); 
+        position: absolute;
+        bottom: 98px;
+        left:45%;
+        
+    }
+    
+     
+    
+    
+    
+    
+    h2{
+        color: rgb(243, 239, 239);
+        font-size:20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 32%;
+        position:relative;
+        position: absolute;
+    }
+    
+    
+   
+   
+    
+    .centre{
+        margin-top: 7%;
+        width:700px; 
+        height: 90vh;
+        opacity:0.3;
+    }
+   
+
+
+  
+a{
+    text-decoration: none;
+    color: white;
+}
+}
+
+@media only screen and (max-width: 896px) {
+    body{
+        background:linear-gradient(rgb(11,11,23),rgb(35, 92, 143),rgb(11,11,23));
+    }
+    
+    h1{
+        font-size: 55px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(238, 236, 233);
+        margin-left:32%;
+        position: absolute;
+        top:35%;
+     
+    }
+    button{
+        border-radius: 50px;
+        background-color: rgb(243, 244, 247);
+        padding:10px;
+        font-size: 20px;
+        color: rgb(15, 15, 15);	
+        background: linear-gradient(rgba(7, 36, 70, 0.8)); 
+        position: absolute;
+        bottom: 98px;
+        
+    }
+    
+     
+    
+    
+    
+    
+    h2{
+        color: rgb(243, 239, 239);
+        font-size:20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 32%;
+        position:relative;
+        top:55%;
+        position: absolute;
+    }
+    
+    
+   
+    .homepage{
+        display: grid;
+        grid-template-columns: auto;
+        gap:7%;
+    }
+    
+  
+    
+
+
+
+    @media only screen and (min-width: 280) and (max-width: 653px) {
+        body{
+            background:linear-gradient(rgb(11,11,23),rgb(35, 92, 143),rgb(11,11,23));
+        }
+        
+        h1{
+            font-size: 55px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(238, 236, 233);
+            margin-left:32%;
+            position: absolute;
+            top:15%;
+         
+        }
+        button{
+            border-radius: 50px;
+            background-color: rgb(12, 28, 82);
+            padding:10px;
+            font-size: 10px;
+            color: antiquewhite;	
+            background: linear-gradient(rgba(7, 36, 70, 0.8)); 
+            bottom: 98px;
+            
+        }
+        
+         
+        
+        
+        
+        
+        h2{
+            color: rgb(243, 239, 239);
+            font-size:20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 32%;
+            position:relative;
+            top:55%;
+        }
+        
+        
+       
+        .homepage{
+            display: grid;
+            grid-template-columns: auto;
+            gap:7%;
+        }
+        
+        
+        
+    
+    
+    
+    
+    
