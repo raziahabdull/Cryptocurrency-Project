@@ -5,7 +5,11 @@ async function fetchCryptoData() {
       "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
     );
     const data = await response.json();
-    allCoins = data;
+    if(!response.ok){
+      return []
+    }
+    console.log({response});
+    // allCoins = data;
     return data;
   } catch (error) {
     console.error("Error fetching cryptocurrency data:", error);
@@ -14,6 +18,7 @@ async function fetchCryptoData() {
 }
 // Function to display cryptocurrency data in the table
 function displayCryptoData(coins) {
+  console.log({coins});
   const cryptoTable = document.getElementById("cryptoTable");
   cryptoTable.innerHTML = "";
   coins.forEach((coin) => {
@@ -54,15 +59,60 @@ function handleSearchInput() {
 // Function to initialize the app
 async function initializeApp() {
   try {
-    await fetchCryptoData();
+    allCoins = await fetchCryptoData();
+    console.log({allCoins});
+    console.log('are we here');
     displayCryptoData(allCoins);
   } catch (error) {
     console.error("Error initializing app:", error);
-    // Handle the error appropriately
   }
 }
-// Example usage:
 initializeApp();
 // Add event listener to search input
 const searchInput = document.getElementById("searchInput");
-searchInput.addEventListener("input", handleSearchInput);
+searchInput.addEventListener("input", handleSearchInput); 
+
+
+const data = [
+  { coinName: "bitcoin", coinSymbol: "btn"},
+  // More data...
+];
+const rowsPerPage = 7;
+let currentPage = 1;
+function displayTable(page) {
+  const table = document.getElementById("myT");
+  const startIndex = (page - 1) * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
+  const slicedData = data.slice(startIndex, endIndex);
+  // Clear existing table rows
+  table.innerHTML = '';
+  // Add new rows to the table
+  slicedData.forEach(item => {
+    const row = table.insertRow();
+    row.insertCell().innerHTML = item.coinName;
+    row.insertCell().innerHTML = item.coinSymbol;
+  });
+  // Update pagination
+  updatePagination(page);
+}
+function updatePagination(currentPage) {
+  const pageCount = Math.ceil(data.length / rowsPerPage);
+  const paginationContainer = document.getElementById("pagination");
+  paginationContainer.innerHTML = '';
+  for (let i = 1; i <= pageCount; i++) {
+    const pageLink = document.createElement("a");
+    pageLink.href = "#";
+    pageLink.innerText = i;
+    pageLink.onclick = function () {
+      displayTable(i);
+    };
+    if (i === currentPage) {
+      pageLink.style.fontWeight = "bold";
+    }
+    paginationContainer.appendChild(pageLink);
+    paginationContainer.appendChild(document.createTextNode(" "));
+  }
+}
+// Initial display
+displayTable(currentPage)
+

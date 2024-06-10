@@ -1,10 +1,8 @@
-body {
+/* body {
     background-color: darkcyan;
-    /* Light gray background */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Set minimum height of the body to full viewport height */
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -16,13 +14,122 @@ body {
     margin: 0 auto;
     flex: 1;
     border-radius: 50px;
-    /* Allow container to grow to fill remaining space */
 }
 .header{
     background-color: #5A6268;
     width:100%;
     padding-top: 2%;
     
+}
+.myT{
+    border-radius: 20px;
+    backdrop-filter: blur(0.5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+th{
+    margin-top: 20%;
+}
+h1 {
+  color:rgb(57,0,143);
+}
+.input-group {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th,
+.table td {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-radius: 50px;
+}
+.table th {
+    background-color:  light thistle;
+    color: #FFFFFF;
+}
+.table th:first-child,
+.table td:first-child {
+    font-weight: bold;
+}
+.table th:not(:first-child),
+.table td:not(:first-child) {
+    font-weight: bold;
+}
+.table tbody tr:hover {
+    background-color: #F8F9FA;
+    cursor: pointer;
+}
+.crypto-logo {
+    width: 30px;
+    height: 30px;
+}
+.btn-primary {
+        background-color: #6C757D;
+        border-color: #6C757D;
+        padding: 15px;
+        color: #D8DADC;
+}
+.btn-primary:hover {
+    background-color: #5A6268;
+    border-color: #5A6268;
+}
+footer {
+    background-color: #343A40;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+}
+ h1 {
+    color: #E2E5EC;
+    text-align: center;
+    height: 49%;
+    padding: 5px;
+    margin-right: 300px;
+    margin-top: px;
+    width: 1157px;
+ }
+ #searchInput{
+    width: 80%;
+    padding: 10px;
+   }
+   .input-group{
+    display: flex;
+    width: 115%;
+   } */
+
+   body {
+    background-color: darkcyan;
+    /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Set minimum height of the body to full viewport height */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    flex: 1;
+    border-radius: 50px;
+    width: 100%;
+    /* Allow container to grow to fill remaining space */
+}
+.header{
+    background-color: #5A6268;
+    width:100%;
+    padding-top: 2%;
 }
 .myT{
     border-radius: 20px;
@@ -33,7 +140,8 @@ body {
     backdrop-filter: blur(5px);
 }
 th{
-    margin-top: 20%;
+    margin-top: 40%;
+    font-size: 50px;
 }
 h1 {
   color:rgb(57,0,143);
@@ -56,37 +164,42 @@ table {
     /* Hide overflowing content */
     text-overflow: ellipsis;
     /* Display ellipsis (...) for overflowed content */
-    padding: 8px;
+    padding: 8px 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    border-radius: 50px;
+
 }
 .table th {
     background-color:  light thistle;
     /* background-color: #343A40; */
     /* Dark gray background for table headers */
     color: #FFFFFF;
+    font-size:40%;
+    text-size-adjust: 30%;
+    height: 60px;
     /* White text color for table headers */
 }
 .table th:first-child,
 .table td:first-child {
-    font-weight: bold;
+    font-size: 20px;
+    /* font-weight: bold; */
     /* Bold font weight for first column */
 }
 .table th:not(:first-child),
 .table td:not(:first-child) {
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-size: 20px;
     /* Normal font weight for other columns */
 }
 .table tbody tr:hover {
     background-color: #F8F9FA;
     /* Light gray background on hover */
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .crypto-logo {
-    width: 30px;
+    width: 50px;
     /* Adjust the width of the coin logo */
-    height: 30px;
+    height: 50px;
     /* Adjust the height of the coin logo */
 }
 .btn-primary {
@@ -114,12 +227,8 @@ footer {
     color: #E2E5EC;
     /* background-color: #5A6268; */
     text-align: center;
-    height: 49%;
-    padding: 5px;
-    margin-right: 300px;
-    /* border-radius: 5px; */
-    margin-top: px;
-    width: 1157px;
+    height: 59%;
+    padding: 20px;
  }
  #searchInput{
     width: 80%;
@@ -127,26 +236,311 @@ footer {
    }
    .input-group{
     display: flex;
-    width: 115%;
    }
-    /* margin-left: ; */
-    /* margin-right: 100px; 
-    margin-top: 1%;  */
-    /* Set heading color to white
+   .crypto-logo {
+    width: 52px; /* Reduce the size of logos for better visibility */
+    height: 52px;
+}
+.table th,
+.table td {
+    font-size: 20px; /* Smaller font size for better fit */
+    padding: 6px; /* Less padding for tighter spacing */
+}
+.btn-primary {
+    padding: 10px; /* Smaller padding for buttons */
+}
+/* Pagination links */
+.pagination a {
+    color: black;
+    float: left;
+    padding: 20px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  /* Style the active/current link */
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
 
-/*  
 
-    /* Responsive styles for small screens */
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+    .table {
+        overflow-x: auto;
+        display: block;
+    }
     .table th,
     .table td {
-        font-size: 12px;
-        /* Decrease font size for small screens */
-        padding: 5px;
-    }
-    header h1 {
-        font-size: 24px;
-        /* Adjust font size for small screens */
+        white-space: nowrap;
     }
 }
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .table th,
+    .table td {
+        font-size: 14px;
+        padding: 5px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+   @media screen and (min-width: 800px) and (max-width: 1280px) {
+    body {
+        background-color: darkcyan;
+        display: grid;
+        flex-direction: column;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+    }
+    .container {
+        display: grid;
+        flex-direction: column;
+        width: 1270px;
+        margin: 0;
+        flex: 1;
+        border-radius: 50px;
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+    .header {
+        background-color: #5A6268;
+        width: 80%;
+        padding-top: 2%;
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+    .myT {
+        border-radius: 20px;
+        backdrop-filter: blur(0.5px);
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        width: 100%;
+    }
+    th {
+        margin-top: 10%;
+    }
+    h1 {
+        color: rgb(57, 0, 143);
+    }
+    .input-group {
+        margin-bottom: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-right: 0px;
+    }
+    .table th,
+    .table td {
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        border-radius: 30px;
+    }
+    .table th {
+        background-color: lightthistle;
+        color: #FFFFFF;
+    }
+    .table th:first-child,
+    .table td:first-child {
+        font-weight: bold;
+    }
+    .table th:not(:first-child),
+    .table td:not(:first-child) {
+        font-weight: bold;
+    }
+    .table tbody tr:hover {
+        background-color: #F8F9FA;
+        cursor: pointer;
+    }
+    .crypto-logo {
+        width: 30px;
+        height: 30px;
+    }
+    .btn-primary {
+        background-color: #6C757D;
+        border-color: #6C757D;
+        padding: 15px;
+        color: #D8DADC;
+    }
+    .btn-primary:hover {
+        background-color: #5A6268;
+        border-color: #5A6268;
+    }
+
+    
+    footer {
+        background-color: #343A40;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: auto;
+    }
+
+
+    h1 {
+        color: #E2E5EC;
+        text-align: center;
+        height: 49%;
+        padding: 5px;
+        margin-right: 300px;
+        margin-top: 0; 
+        width: 900px;
+    }
+
+    #searchInput {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .input-group {
+        display: flex;
+        width: 129%;
+    }
+}
+
+
+
+    /* @media screen and (min-width:280px) and (max-width:480px) {
+        body {
+            background-color: darkcyan;
+            display:grid;
+            flex-direction: column;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            
+        
+        }
+        .container {
+            display: grid;
+            flex-direction: column;
+            width: 1270px;
+            margin: 0 ;
+            flex: 1;
+            border-radius: 50px;
+            padding-right: 0px;
+            margin-left: 0px;
+        }
+        .header{
+            background-color: #5A6268;
+            width:80%;
+            padding-top: 2%;
+            padding-right: 0px;
+            margin-right: 0px;
+            
+            
+        }
+        .myT{
+            border-radius: 20px;
+            backdrop-filter: blur(0.5px); 
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            width:100%;
+        }
+        th{
+            margin-top: 10%;
+        }
+        h1 {
+          color:rgb(57,0,143);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-right: 0px;
+        }
+        .table th,
+        .table td {
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-radius: 30px;
+        }
+        .table th {
+            background-color:  light thistle;
+            color: #FFFFFF;
+        }
+        .table th:first-child,
+        .table td:first-child {
+            font-weight: bold;
+        }
+        .table th:not(:first-child),
+        .table td:not(:first-child) {
+            font-weight: bold;
+        }
+        .table tbody tr:hover {
+            background-color: #F8F9FA;
+            cursor: pointer;
+        }
+        .crypto-logo {
+            width: 30px;
+            height: 30px;
+        }
+        .btn-primary {
+                background-color: #6C757D;
+                border-color: #6C757D;
+                padding: 15px;
+                color: #D8DADC;
+        }
+        .btn-primary:hover {
+            background-color: #5A6268;
+            border-color: #5A6268;
+        }
+        footer {
+            background-color: #343A40;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: auto;
+        }
+         h1 {
+            color: #E2E5EC;
+            text-align: center;
+            height: 49%;
+            padding: 5px;
+            margin-right: 300px;
+            margin-top: px;
+            width: 900px;
+         }
+         #searchInput{
+            width: 70%;
+            margin-right: 0px;
+           }
+           .input-group{
+            display: flex;
+            width: 129%;
+           }
+        }
+    
+    
+ */
